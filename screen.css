@@ -10,13 +10,14 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, p {
+
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 150%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: center; }
 
 body {
   line-height: 1; }
@@ -29,7 +30,7 @@ table {
   border-spacing: 0; }
 
 caption, th, td {
-  text-align: left;
+  text-align: center;
   font-weight: normal;
   vertical-align: middle; }
 
@@ -45,7 +46,7 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-body {
+body {sidebar
   font-family: sans-serif;
   color: #2a2a2a; }
 
@@ -53,6 +54,3 @@ a {
   color: #0388a6; }
   a:hover {
     color: #009ce0; }
-
-#main {
-  padding: 50px; }
