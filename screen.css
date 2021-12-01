@@ -54,3 +54,9 @@ a {
   color: #0388a6; }
   a:hover {
     color: #009ce0; }
+
+#container{
+  background: white;
+  width: 70%;
+  margin: auto;
+}
