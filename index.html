@@ -1,62 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <style>
-    h1 {text-align: center;}
-    p {text-align: center;}
-    </style>
-    <meta charset="utf-8" />
-    <link href="screen.css" media="screen" rel="stylesheet" type="text/css" />
-    <title>Tristans Super Cool Portflio</title>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
-  <body style="background: lightblue;">
-    <div id="container">
-
-      <h1 style="padding: 50px;  font-size: xx-large;">Tristan Hook</h1>
-
-      <p style="font-size: x-large;">This is a web version of my portfolio, designed to show off <br> my development throught computer science courses at OSU. <br>
-        Here is a link to the repo for this very <a href="https://www.github.com/hookty/hookty.github.io">page</a>! <br><br>
-        Here is my <a href="Resume.pdf">resume</a>.<br><br></p>
-
-        <div style="display:table; margin-left:auto; margin-right:auto;">
-          <embed src="Resume.pdf" width="800" height="1100"/>
-        </div>
-
-
-
-        <br>
-        <br>
-
-      <p style="text-align:center;">
-        <img src="download.jpeg" style="text-align:center;">
-      </p>
-
-    <div style="display:table; margin-left:auto; margin-right:auto;">
-
-      <br>
-      <br>
-      <p style="font-size: x-large;">Here is a sample of some of my animation work</p>
-      <br>
-
-      <video width="800" autoplay loop muted="">
-        <source src="cube.mp4" type="video/mp4" />
-      </video>
-      <br>
-      <video width="800" autoplay loop muted="">
-        <source src="icosphere.mp4" type="video/mp4" />
-      </video>
-      <br>
-      <video width="800" autoplay loop muted="">
-        <source src="caliper.mp4" type="video/mp4" />
-      </video>
-      <br>
-      <video width="800" autoplay loop muted="">
-        <source src="liquid.mp4" type="video/mp4" />
-      </video>
-      <br>
-      <video width="800" autoplay loop muted="">
-        <source src="test.mp4" type="video/mp4" />
-      </video>
-      <br>
-  </div>
-</body</html>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer bounds="tight" src="DECLIGHT.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
